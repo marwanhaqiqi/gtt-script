@@ -524,6 +524,11 @@ local FishImageURL = {
     ["Starglass Guardian"]       = NP .. "1000192227%20(1).png",
     ["Riftborn Arowana"]         = NP .. "1000195428.png",
     ["Crimson Dreadtusk"]        = NP .. "1000195427.png",
+    ["Wintertusk Mammofin"]      = NP .. "113.png",
+    ["Stormhell Brute"]          = NP .. "114.png",
+    ["Pyrocoil"]                 = NP .. "115.png",
+    ["Elemental Hydra"]          = NP .. "51076.png",
+    ["Overload Hydra"]           = NP .. "51072.png",
 }
 
 local FishImageURLLower = {}
