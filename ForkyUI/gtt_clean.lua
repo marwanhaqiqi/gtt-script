@@ -324,7 +324,7 @@ local MutasiFalsePositiveSpecies = {
     "aurora starfish",
     "aurora narwhal",
     "aurora manatee",
-    "aurora buterfly fish",
+    "aurora butterfly fish",
     "midnight star squid",
 }
 
