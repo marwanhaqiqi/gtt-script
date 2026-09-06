@@ -303,8 +303,7 @@ local SecretFishList = {
     "Glacial Serpent", "Caustic Maw", "Coral Reaper", "Sunken Hadalith", "Trench Warden",
     "Caeruleum Razerback", "Two-headed shark", "Ragnarex", "Colossal Shipwreck Crab",
     "Astrelle", "Moonwake Ray", "Astralune", "Starglass Guardian", "Pelagon",
-    "Crimson Dreadtusk", "Riftborn Arowana",
-    "Overload Hydra", "Elemental Hydra", "Wintertusk Mammofin", "Stormhell Brute", "Pyrocoil",
+    "Crimson Dreadtusk", "Riftborn Arowana", "Overload Hydra", "Elemental Hydra", "Wintertusk Mammofin", "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core",
 }
 
 local ForgottenList = {
@@ -433,6 +432,8 @@ local FishChanceData = {
     ["Wintertusk Mammofin"]       = "1 in 4M",
     ["Stormhell Brute"]           = "1 in 4M",
     ["Pyrocoil"]                  = "1 in 4M",
+    ["Ashen Kingfish"]            = "1 in 3.5M",
+    ["Tribunal Withering Core"]   = "1 in 5M",
 }
 
 local NP = "https://raw.githubusercontent.com/revkatomy-max/new-pisit-image/main/"
@@ -529,6 +530,8 @@ local FishImageURL = {
     ["Pyrocoil"]                 = NP .. "115.png",
     ["Elemental Hydra"]          = NP .. "51076.png",
     ["Overload Hydra"]           = NP .. "51072.png",
+    ["Ashen Kingfish"]           = NP .. "Ashen%20Kingfish.png",
+    ["Tribunal Withering Core"]  = NP .. "Tribunal%20Withering%20Core.png",
 }
 
 local FishImageURLLower = {}
