@@ -315,7 +315,7 @@ local ForgottenList = {
 local MutasiList = {
     "Noob", "Fairy Dust", "Holographic", "Gemstone", "Fire", "Color Burn", "Frozen",
     "Galaxy", "BloodMoon", "Binary", "Lightning", "Disco", "Festive", "Radioactive", "Moon Fragment",
-    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental"
+    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental", "Solar",
 }
 
 local MutasiFalsePositiveSpecies = {
