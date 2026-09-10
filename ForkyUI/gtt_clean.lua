@@ -15,12 +15,12 @@ local Workspace           = game:GetService("Workspace")
 --  CONFIGURATION
 -- ============================================================
 
-local WEBHOOK_URL           = "https://discord.com/api/webhooks/1511291405929156678/ZUc6y6_x69taRIhzYodDG0VWeD43PJ6XGQBlxfpby_Cpmab75KPC55IKFIfbo7_zFsn6"
-local WEBHOOK_STATS         = "https://discord.com/api/webhooks/1511289204481720452/xCFGbP5RxrZRbgWo7kaiGGvEuovSVtfrte1_J1qsJhxOZIq9B4CvuSCDEWogf185aXmu"
-local WEBHOOK_LEADERBOARD   = "https://discord.com/api/webhooks/1511294906537213973/xEREYozKLsBqBOboIi13zNAhbNA-Yd3nkLEoGfRv4i_-fcSLuhJbJ41AcwSKHucowR5o"
-local WEBHOOK_FISH          = "https://discord.com/api/webhooks/1511289254309920769/-atjZ426SzBz6XAlN-E4mrUCBpDxrsMjxW-y1pi4mpzSNb8u1wa7nDbLgNzJppV09bjj"
-local WEBHOOK_CHAT          = "https://discord.com/api/webhooks/1511291170309800046/dvNnnqLqUL0XVeF240aHpIG1Vlye3lyXz3QtV8SG2gMZs8cEKSCXR5UjFcOcRBA5KtrS"
-local WEBHOOK_GALATAMA      = "https://discord.com/api/webhooks/1512015161949425766/KJvYJHiRylTtrDislJB5SoRxu159RHRqtfccHqBIWI3Ea79UF523hAGvMVUqpzJMaII5"   -- isi lewat UI atau hardcode di sini
+local WEBHOOK_URL           = "https://discord.com/api/webhooks/1547564460959600651/jrt8mXGo4gMp823EkT1fX5j8ptKm61LmmcMBlZlJyStPP0rHQykM8KZt7_93zpdUUtv0"
+local WEBHOOK_STATS         = "https://discord.com/api/webhooks/1547562394585276439/LavUyQlwOlhume-qR6qiD0HGx8WeTMKxk8FzEKHgTVFWbzz1_ktU9DqJQcmfGFiENXnC"
+local WEBHOOK_LEADERBOARD   = "https://discord.com/api/webhooks/1547565438874157186/t4Kv3pE2nPgUDx-5Lawps8CxE30I0A_MaDLzyIGPbOP7nU_rK8A3eovYToXplHwiOExl"
+local WEBHOOK_FISH          = "https://discord.com/api/webhooks/1547562794897899540/u_ETg2LAqxoguGKHek6A25GqEH-kdYP0fEDqfTqC13PWMiHs4eZvcZ5DIwCKgbX80drK"
+local WEBHOOK_CHAT          = "https://discord.com/api/webhooks/1547562527783653386/0bPlxnOCUp2Sv0chK5d-7Yn6Vu3F8jjf6aHQU6CkxCIK28Hevq3_HccCv128V57k828J"
+local WEBHOOK_GALATAMA      = "https://discord.com/api/webhooks/1547563169113706509/Z47oFRt7mrjUsQjPbcxVwyHUH2ZISW-w8JbIcBu8TrXJuT9Mnzl4_zW_noQ4KuVrCV0p"   -- isi lewat UI atau hardcode di sini
 local DISCORD_ROLE_ID       = ""
 local PROXY                 = "https://square-haze-a007.remediashop.workers.dev"
 local SCRIPT_ACTIVE         = false
