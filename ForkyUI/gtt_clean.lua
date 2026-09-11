@@ -136,7 +136,28 @@ local EventHuntData = {
         color        = 9055202,
         emoji        = "💫",
     },
-}
+    {
+        textTriggers = { "the volcano has erupted", "volcano has erupted" },
+        title        = "🌋 Volcano Erupted!",
+        description  = "lava zone aktif, gas mancing di area panas 🔥",
+        color        = 15105570,
+        emoji        = "🌋",
+    },
+    {
+        textTriggers = { "a massive storm is occurring", "massive storm is occurring" },
+        title        = "⛈️ Massive Storm!",
+        description  = "storm gede lagi terjadi, cuss mancing 🌊",
+        color        = 3096793,
+        emoji        = "⛈️",
+    },
+    {
+        textTriggers = { "a blizzard has started", "blizzard has started" },
+        title        = "❄️ Blizzard Dimulai!",
+        description  = "salju turun, cuss mancing area dingin ❄️",
+        color        = 10730750,
+        emoji        = "❄️",
+    },
+    }
 
 local EventCooldown = {}
 
@@ -1749,8 +1770,8 @@ local function ProcessEventText(text)
     if not text or text == "" then return end
     local lower = text:lower()
 
-    local isRelevant = lower:find("hunt") or lower:find("started") or lower:find("crystal")
-        or lower:find("spawned") or lower:find("aurora")
+    local isRelevant = lower:find("hunt") or lower:find("started") or lower:find("crystal") 
+        or lower:find("spawned") or lower:find("aurora") or lower:find("erupted") or lower:find("occurring")
     if not isRelevant then return end
 
     for _, evData in ipairs(EventHuntData) do
