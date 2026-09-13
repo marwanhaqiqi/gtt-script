@@ -303,13 +303,14 @@ local SecretFishList = {
     "Glacial Serpent", "Caustic Maw", "Coral Reaper", "Sunken Hadalith", "Trench Warden",
     "Caeruleum Razerback", "Two-headed shark", "Ragnarex", "Colossal Shipwreck Crab",
     "Astrelle", "Moonwake Ray", "Astralune", "Starglass Guardian", "Pelagon",
-    "Crimson Dreadtusk", "Riftborn Arowana", "Overload Hydra", "Elemental Hydra", "Wintertusk Mammofin", "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core",
+    "Crimson Dreadtusk", "Riftborn Arowana", "Overload Hydra", "Elemental Hydra", "Wintertusk Mammofin",
+    "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core", "Everbloom", "Mr Money Bags",
 }
 
 local ForgottenList = {
     "Sea Eater", "Thunderzilla", "Iridesca", "Frostbite Leviathan", "Fluorivane", "Cerulean Dragon","Crystalline Behemoth",
     "Trench Warden", "Ragnarex", "Astralune", "Crimson Dreadtusk",
-    "Overload Hydra", "Elemental Hydra",
+    "Overload Hydra", "Elemental Hydra", "Everbloom",
 }
 
 local MutasiList = {
@@ -434,6 +435,8 @@ local FishChanceData = {
     ["Pyrocoil"]                  = "1 in 4M",
     ["Ashen Kingfish"]            = "1 in 3.5M",
     ["Tribunal Withering Core"]   = "1 in 5M",
+    ["Mr Money Bags"]             = "1 in 4M",
+    ["Everbloom"]                 = "1 in 20M",
 }
 
 local NP = "https://raw.githubusercontent.com/revkatomy-max/new-pisit-image/main/"
@@ -532,6 +535,8 @@ local FishImageURL = {
     ["Overload Hydra"]           = NP .. "51072.png",
     ["Ashen Kingfish"]           = NP .. "Ashen%20Kingfish.png",
     ["Tribunal Withering Core"]  = NP .. "Tribunal%20Withering%20Core.png",
+    ["Mr Money Bags"]            = NP .. "Mr%20Money%20Bags.webp",
+    ["Everbloom"]                = NP .. "Everbloom.webp",
 }
 
 local FishImageURLLower = {}
