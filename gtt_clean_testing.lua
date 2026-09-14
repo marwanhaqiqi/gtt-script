@@ -1770,12 +1770,12 @@ local function SendEventWebhook(eventData)
     })
 end
 
-local function ProcessEventText(text)
-    if not SCRIPT_ACTIVE then return end
-    if not text or text == "" then return end
-
-    local lower = StripTags(text):lower()
-    lower = Trim(lower)
+   local function ProcessEventText(text)
+       if not SCRIPT_ACTIVE then return end
+       if not text or text == "" then return end
+       local lower = StripTags(text):lower()
+       lower = Trim(lower)
+       print("[EventDebug] captured:", lower)  -- hapus lagi kalau sudah beres
 
     for _, evData in ipairs(EventHuntData) do
         for _, pattern in ipairs(evData.patterns) do
@@ -1799,18 +1799,18 @@ end
 
 local _hookedLabels = {}
 
-local function HookLabel(label)
+local function HookLabel(label, isNew)
     if _hookedLabels[label] then return end
-
     _hookedLabels[label] = true
 
-    -- IMPORTANT:
-    -- Jangan proses Text yang sudah ada ketika script mulai.
-    -- Kita hanya mendeteksi perubahan Text setelah monitor aktif.
+    -- Kalau label ini baru muncul SETELAH monitor aktif,
+    -- langsung cek isi Text-nya sekarang juga (bukan cuma nunggu perubahan).
+    if isNew and label.Text and label.Text ~= "" then
+        ProcessEventText(label.Text)
+    end
 
     label:GetPropertyChangedSignal("Text"):Connect(function()
         local text = label.Text
-
         if text and text ~= "" then
             ProcessEventText(text)
         end
@@ -1821,13 +1821,17 @@ local function StartEventMonitor()
     task.spawn(function()
         local pg = Players.LocalPlayer:WaitForChild("PlayerGui", 30)
         if not pg then return end
+
+        -- Label yang SUDAH ADA saat start: jangan proses isi awalnya
         for _, v in ipairs(pg:GetDescendants()) do
-            if v:IsA("TextLabel") or v:IsA("TextButton") then HookLabel(v) end
+            if v:IsA("TextLabel") or v:IsA("TextButton") then HookLabel(v, false) end
         end
+
+        -- Label BARU yang muncul setelah start: proses isi awalnya juga
         pg.DescendantAdded:Connect(function(v)
             if v:IsA("TextLabel") or v:IsA("TextButton") then
                 task.wait(0)
-                HookLabel(v)
+                HookLabel(v, true)
             end
         end)
     end)
