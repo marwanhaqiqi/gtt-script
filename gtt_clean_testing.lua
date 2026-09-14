@@ -97,46 +97,58 @@ local GALATAMA_MUTASI_BONUS = 100
 --  EVENT HUNT DATABASE
 -- ============================================================
 
+-- ============================================================
+--  EVENT HUNT DATABASE
+-- ============================================================
+
 local EVENT_COOLDOWN_SECONDS = 120
 
 local EventHuntData = {
     {
-        textTriggers = { "treasure hunt" },
+        patterns     = { "treasure hunt" },
         title        = "💰 Treasure Hunt Dimulai!",
         description  = "katakan Peta 🗺️",
         color        = 16766720,
         emoji        = "💰",
     },
+
     {
-        textTriggers = { "dark megalodon hunt", "dark megalodon" },
+        patterns     = { "dark megalodon hunt" },
         title        = "🌑 Dark Megalodon Hunt Dimulai!",
         description  = "Dark Mega guys 🦈",
         color        = 2303786,
         emoji        = "🌑",
     },
+
     {
-        textTriggers = { "megalodon hunt" },
+        patterns     = { "megalodon hunt" },
         title        = "🦈 Megalodon Hunt Dimulai!",
         description  = "Mega guys 🎣",
         color        = 3447003,
         emoji        = "🦈",
     },
+
     {
-        textTriggers = { "thunderzilla hunt", "thunderzilla" },
+        patterns     = { "thunderzilla hunt" },
         title        = "⚡ Thunderzilla Hunt Dimulai!",
         description  = "zilla oi ⚡",
         color        = 16776960,
         emoji        = "⚡",
     },
+
     {
-        textTriggers = { "crystals have spawned", "crystals have", "crystal" },
+        patterns     = { "crystals have spawned" },
         title        = "💎 Crystal Event Dimulai!",
         description  = "Crystal muncul gas nambang 💎",
         color        = 1146986,
         emoji        = "💎",
     },
+
     {
-        textTriggers = { "aurora borealis", "aurora event" },
+        patterns     = {
+            "aurora borealis",
+            "aurora event",
+        },
         title        = "💫 Aurora Borealis!",
         description  = "cantiknyooo 💫",
         color        = 9055202,
@@ -1758,20 +1770,24 @@ end
 local function ProcessEventText(text)
     if not SCRIPT_ACTIVE then return end
     if not text or text == "" then return end
-    local lower = text:lower()
 
-    local isRelevant = lower:find("hunt") or lower:find("started") or lower:find("crystal")
-        or lower:find("spawned") or lower:find("aurora")
-    if not isRelevant then return end
+    local lower = StripTags(text):lower()
+    lower = Trim(lower)
 
     for _, evData in ipairs(EventHuntData) do
-        for _, trigger in ipairs(evData.textTriggers) do
-            if lower:find(trigger, 1, true) then
+        for _, pattern in ipairs(evData.patterns) do
+
+            if lower:find(pattern, 1, true) then
+
                 local now = os.time()
-                if (now - (EventCooldown[evData.title] or 0)) >= EVENT_COOLDOWN_SECONDS then
+                local lastEvent = EventCooldown[evData.title] or 0
+
+                if (now - lastEvent) >= EVENT_COOLDOWN_SECONDS then
                     EventCooldown[evData.title] = now
+
                     SendEventWebhook(evData)
                 end
+
                 return
             end
         end
@@ -1782,10 +1798,19 @@ local _hookedLabels = {}
 
 local function HookLabel(label)
     if _hookedLabels[label] then return end
+
     _hookedLabels[label] = true
-    ProcessEventText(label.Text)
+
+    -- IMPORTANT:
+    -- Jangan proses Text yang sudah ada ketika script mulai.
+    -- Kita hanya mendeteksi perubahan Text setelah monitor aktif.
+
     label:GetPropertyChangedSignal("Text"):Connect(function()
-        ProcessEventText(label.Text)
+        local text = label.Text
+
+        if text and text ~= "" then
+            ProcessEventText(text)
+        end
     end)
 end
 
