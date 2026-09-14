@@ -113,11 +113,14 @@ local EventHuntData = {
     },
 
     {
-        patterns     = { "dark megalodon hunt" },
-        title        = "🌑 Dark Megalodon Hunt Dimulai!",
-        description  = "Dark Mega guys 🦈",
-        color        = 2303786,
-        emoji        = "🌑",
+        patterns = {
+        "only 1 dark megalodon",
+        "dark megalodon hunt",
+        },
+        title       = "🌑 Dark Megalodon Hunt Dimulai!",
+        description = "Dark Mega guys 🦈",
+        color       = 2303786,
+        emoji       = "🌑",
     },
 
     {
