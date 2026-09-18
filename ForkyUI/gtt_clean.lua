@@ -326,7 +326,7 @@ local MutasiFalsePositiveSpecies = {
     "aurora narwhal",
     "aurora manatee",
     "aurora butterfly fish",
-    "midnight star squid",
+    "midnight stars squid",
 }
 
 local LegendaryCrystalList = {
