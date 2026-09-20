@@ -305,6 +305,7 @@ local SecretFishList = {
     "Astrelle", "Moonwake Ray", "Astralune", "Starglass Guardian", "Pelagon",
     "Crimson Dreadtusk", "Riftborn Arowana", "Overload Hydra", "Elemental Hydra", "Wintertusk Mammofin",
     "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core", "Everbloom", "Mr Money Bags",
+    "Velobyte",
 }
 
 local ForgottenList = {
@@ -316,7 +317,7 @@ local ForgottenList = {
 local MutasiList = {
     "Noob", "Fairy Dust", "Holographic", "Gemstone", "Fire", "Color Burn", "Frozen",
     "Galaxy", "BloodMoon", "Binary", "Lightning", "Disco", "Festive", "Radioactive", "Moon Fragment",
-    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental", "Solar",
+    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental", "Solar", "8-Bit",
 }
 
 local MutasiFalsePositiveSpecies = {
@@ -437,6 +438,7 @@ local FishChanceData = {
     ["Tribunal Withering Core"]   = "1 in 5M",
     ["Mr Money Bags"]             = "1 in 4M",
     ["Everbloom"]                 = "1 in 20M",
+    ["Velobyte"]                  = "1 in 5M",
 }
 
 -- local NP = "https://raw.githubusercontent.com/revkatomy-max/new-pisit-image/main/"
@@ -536,6 +538,7 @@ local FishImageURL = {
     ["Tribunal Withering Core"]  = NP .. "twc.png",
     ["Mr Money Bags"]            = NP .. "mrmoney.png",
     ["Everbloom"]                = NP .. "everbloom.png",
+    ["Velobyte"]                 = NP .. "velobyte.png",
 }
 
 local FishImageURLLower = {}
