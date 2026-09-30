@@ -303,7 +303,7 @@ local SecretFishList = {
     "Glacial Serpent", "Caustic Maw", "Coral Reaper", "Sunken Hadalith", "Trench Warden",
     "Caeruleum Razerback", "Two-headed shark", "Ragnarex", "Colossal Shipwreck Crab",
     "Astrelle", "Moonwake Ray", "Astralune", "Starglass Guardian", "Pelagon",
-    "Crimson Dreadtusk", "Riftborn Arowana", "Overload Hydra", "Elemental Hydra", "Wintertusk Mammofin",
+    "Crimson Dreadtusk", "Riftborn Arowana", "Overlord Hydra", "Elemental Hydra", "Wintertusk Mammofin",
     "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core", "Everbloom", "Mr Money Bags", 
     "Velobyte", "ShellShock X", "Cenobyte.EXE", 
 }
@@ -311,7 +311,7 @@ local SecretFishList = {
 local ForgottenList = {
     "Sea Eater", "Thunderzilla", "Iridesca", "Frostbite Leviathan", "Fluorivane", "Cerulean Dragon","Crystalline Behemoth",
     "Trench Warden", "Ragnarex", "Astralune", "Crimson Dreadtusk",
-    "Overload Hydra", "Elemental Hydra", "Everbloom", "Cenobyte.EXE",
+    "Overlord Hydra", "Elemental Hydra", "Everbloom", "Cenobyte.EXE",
 }
 
 local MutasiList = {
@@ -429,7 +429,7 @@ local FishChanceData = {
     ["Pelagon"]                   = "1 in 4.5M",
     ["Riftborn Arowana"]          = "1 in 4.5M",
     ["Crimson Dreadtusk"]         = "1 in 20M",
-    ["Overload Hydra"]            = "1 in 45M",
+    ["Overlord Hydra"]            = "1 in 45M",
     ["Elemental Hydra"]           = "1 in 40M",
     ["Wintertusk Mammofin"]       = "1 in 4M",
     ["Stormhell Brute"]           = "1 in 4M",
@@ -535,7 +535,7 @@ local FishImageURL = {
     ["Stormhell Brute"]          = NP .. "stormhell.png",
     ["Pyrocoil"]                 = NP .. "pyrocoil.png",
     ["Elemental Hydra"]          = NP .. "elementalhydra.png",
-    ["Overload Hydra"]           = NP .. "overloadhydra.png",
+    ["Overlord Hydra"]           = NP .. "overlordhydra.png",
     ["Ashen Kingfish"]           = NP .. "ashenkingfish.png",
     ["Tribunal Withering Core"]  = NP .. "twc.png",
     ["Mr Money Bags"]            = NP .. "mrmoney.png",
