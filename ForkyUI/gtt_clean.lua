@@ -22,7 +22,8 @@ local WEBHOOK_FISH          = "https://discord.com/api/webhooks/1547562794897899
 local WEBHOOK_CHAT          = "https://discord.com/api/webhooks/1547562527783653386/0bPlxnOCUp2Sv0chK5d-7Yn6Vu3F8jjf6aHQU6CkxCIK28Hevq3_HccCv128V57k828J"
 local WEBHOOK_GALATAMA      = "https://discord.com/api/webhooks/1547563169113706509/Z47oFRt7mrjUsQjPbcxVwyHUH2ZISW-w8JbIcBu8TrXJuT9Mnzl4_zW_noQ4KuVrCV0p"   -- isi lewat UI atau hardcode di sini
 local DISCORD_ROLE_ID       = ""
-local PROXY                 = "https://square-haze-a007.remediashop.workers.dev"
+-- local PROXY                 = "https://square-haze-a007.remediashop.workers.dev"
+local PROXY = "https://weyyy-proxy.gallungmarwan147.workers.dev"
 local SCRIPT_ACTIVE         = false
 
 -- Per-webhook identity (nama + avatar masing-masing)
@@ -1453,8 +1454,11 @@ end
 --  CHAT LOG
 -- ============================================================
 
+-- local function GetAvatarUrl(player)
+--     return player and (PROXY .. "/avatar/" .. tostring(player.UserId) .. "?t=" .. tostring(os.time())) or nil
+-- end
 local function GetAvatarUrl(player)
-    return player and (PROXY .. "/avatar/" .. tostring(player.UserId) .. "?t=" .. tostring(os.time())) or nil
+    return player and (PROXY .. "/avatar/" .. tostring(player.UserId)) or nil
 end
 
 local function SendChatLog(senderName, message)
@@ -1508,7 +1512,8 @@ local function CheckAndSend(rawMsg)
     if not data then return end
 
     local targetPlayer = FindPlayer(data.player)
-    local avatarUrl    = GetAvatarUrl(targetPlayer)
+    -- local avatarUrl    = GetAvatarUrl(targetPlayer)
+    local avatarUrl = targetPlayer and (AvatarCache[targetPlayer.UserId] or GetAvatarUrl(targetPlayer)) or nil
     local uid = targetPlayer and targetPlayer.UserId or PlayerNameToId[string.lower(data.player)]
 
     local canonicalName = data.player
