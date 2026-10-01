@@ -951,9 +951,28 @@ end
 local function CheckGalatamaMutasiBonus(mutasi)
     if not mutasi or mutasi == "" then return false, nil end
     local ml = mutasi:lower()
+
+    local excludedWords = {}
     for _, excluded in ipairs(MutasiNoBonus) do
-        if ml == excluded:lower() then return false, mutasi end
+        for word in excluded:lower():gmatch("%S+") do
+            excludedWords[word] = true
+        end
     end
+
+    local allExcluded = true
+    local hasWord = false
+    for word in ml:gmatch("%S+") do
+        hasWord = true
+        if not excludedWords[word] then
+            allExcluded = false
+            break
+        end
+    end
+
+    if not hasWord or allExcluded then
+        return false, mutasi
+    end
+
     return true, mutasi
 end
 
@@ -1372,7 +1391,7 @@ local function SendGalatamaLeaderboard(isFinal)
         avatar_url = WH_IDENTITY.galatama.avatar,
         content    = contentMsg,
         embeds     = { BuildEmbed(title,
-            "```\nBlob Shark=25 | Ghost Shark=50 | Skeleton Narwhal=60 | Worm Fish=300 | Megalodon=400\nBonus Mutasi (kecuali Big & Shiny): +100pts\n```",
+            "```\nBlob Shark=25 | Ghost Shark=50 | Skeleton Narwhal=60 | Worm Fish=300 | Megalodon=400\nBonus Mutasi (kecuali Big/Shiny/Big Shiny): +100pts\n```",
             16766720, fields, nil, nil, "ForkyHUB — Galatama") },
     }
 
