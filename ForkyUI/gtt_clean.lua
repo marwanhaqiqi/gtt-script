@@ -306,7 +306,7 @@ local SecretFishList = {
     "Astrelle", "Moonwake Ray", "Astralune", "Starglass Guardian", "Pelagon",
     "Crimson Dreadtusk", "Riftborn Arowana", "Overlord Hydra", "Elemental Hydra", "Wintertusk Mammofin",
     "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core", "Everbloom", "Mr Money Bags", 
-    "Velobyte", "ShellShock X", "Cenobyte.EXE", "Jellybeam" , "GigaByte" ,
+    "Velobyte", "ShellShock X", "Cenobyte.EXE", "Jellybeam", "GigaByte", "Spiritborn Axolotl",
 }
 
 local ForgottenList = {
@@ -318,7 +318,7 @@ local ForgottenList = {
 local MutasiList = {
     "Noob", "Fairy Dust", "Holographic", "Gemstone", "Fire", "Color Burn", "Frozen",
     "Galaxy", "BloodMoon", "Binary", "Lightning", "Disco", "Festive", "Radioactive", "Moon Fragment",
-    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental", "Solar", "8-Bit", "Invasion" ,
+    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental", "Solar", "8-Bit", "Invasion",
 }
 
 local MutasiFalsePositiveSpecies = {
@@ -444,6 +444,7 @@ local FishChanceData = {
     ["Cenobyte.EXE"]              = "1 in 25M",
     ["Jellybeam"]                 = "1 in 4M",
     ["GigaByte"]                  = "1 in 4.5M",
+    ["Spiritborn Axolotl"]        = "1 in 4M",
 }
 
 -- local NP = "https://raw.githubusercontent.com/revkatomy-max/new-pisit-image/main/"
@@ -548,6 +549,7 @@ local FishImageURL = {
     ["Cenobyte.EXE"]             = NP .. "cenobyte.png",
     ["Jellybeam"]                = NP .. "jellybeam.png",
     ["GigaByte"]                 = NP .. "gigabyte.png",
+    ["Spiritborn Axolotl"]       = NP .. "spiritborn.png",
 }
 
 local FishImageURLLower = {}
