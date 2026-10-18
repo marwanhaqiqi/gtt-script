@@ -283,7 +283,7 @@ pcall(LoadMemberMapFromReplicatedStorage)
 -- ============================================================
 
 local SecretFishList = {
-    "Crystal Crab", "Orca", "Zombie Shark", "Zombie Megalodon", "Dead Zombie Shark",
+    "Crystal Crab", "Orca", "Zombie Shark", "Zombie Megalodon", "Phantom Dead Zombie Shark",
     "Blob Shark", "Ghost Shark", "Skeleton Narwhal", "Ghost Worm Fish", "Worm Fish",
     "Megalodon", "1x1x1x1 Comet Shark", "Bloodmoon Whale", "Lochness Monster",
     "Monster Shark", "Eerie Shark", "Great Whale", "Frostborn Shark", "Thin Armor Shark",
@@ -306,19 +306,19 @@ local SecretFishList = {
     "Astrelle", "Moonwake Ray", "Astralune", "Starglass Guardian", "Pelagon",
     "Crimson Dreadtusk", "Riftborn Arowana", "Overlord Hydra", "Elemental Hydra", "Wintertusk Mammofin",
     "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core", "Everbloom", "Mr Money Bags", 
-    "Velobyte", "ShellShock X", "Cenobyte.EXE", "Jellybeam", "GigaByte", "Spiritborn Axolotl",
+    "Velobyte", "ShellShock X", "Cenobyte.EXE", "Jellybeam", "GigaByte", "Spiritborn Axolotl", "Sweet Tooth Gourdling", "Mawsoleum",
 }
 
 local ForgottenList = {
     "Sea Eater", "Thunderzilla", "Iridesca", "Frostbite Leviathan", "Fluorivane", "Cerulean Dragon","Crystalline Behemoth",
     "Trench Warden", "Ragnarex", "Astralune", "Crimson Dreadtusk",
-    "Overlord Hydra", "Elemental Hydra", "Everbloom", "Cenobyte.EXE",
+    "Overlord Hydra", "Elemental Hydra", "Everbloom", "Cenobyte.EXE", "Mawsoleum"
 }
 
 local MutasiList = {
     "Noob", "Fairy Dust", "Holographic", "Gemstone", "Fire", "Color Burn", "Frozen",
     "Galaxy", "BloodMoon", "Binary", "Lightning", "Disco", "Festive", "Radioactive", "Moon Fragment",
-    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental", "Solar", "8-Bit", "Invasion",
+    "Abyssal", "Cosmic", "Equinox", "Glitch", "Aurora", "Midnight", "Elemental", "Solar", "8-Bit", "Invasion", "Haunted",
 }
 
 local MutasiFalsePositiveSpecies = {
@@ -340,7 +340,7 @@ local FishChanceData = {
     ["Orca"]                      = "1 in 1.5M",
     ["Zombie Shark"]              = "1 in 250K",
     ["Zombie Megalodon"]          = "1 in 4M",
-    ["Dead Zombie Shark"]         = "1 in 500K",
+    ["Phantom Dead Zombie Shark"] = "1 in 500K",
     ["Blob Shark"]                = "1 in 250K",
     ["Ghost Shark"]               = "1 in 500K",
     ["Skeleton Narwhal"]          = "1 in 600K",
@@ -445,6 +445,8 @@ local FishChanceData = {
     ["Jellybeam"]                 = "1 in 4M",
     ["GigaByte"]                  = "1 in 4.5M",
     ["Spiritborn Axolotl"]        = "1 in 4M",
+    ["Sweet Tooth Gourdling"]     = "1 in 3M",
+    ["Mawsoleum"]                 = "1 in 20M",
 }
 
 -- local NP = "https://raw.githubusercontent.com/revkatomy-max/new-pisit-image/main/"
@@ -550,6 +552,9 @@ local FishImageURL = {
     ["Jellybeam"]                = NP .. "jellybeam.png",
     ["GigaByte"]                 = NP .. "gigabyte.png",
     ["Spiritborn Axolotl"]       = NP .. "spiritborn.png",
+    ["Phantom Dead Zombie Shark"]= NP .. "phantomdead.png",
+    ["Sweet Tooth Gourdling"]    = NP .. "sweet.png",
+    ["Mawsoleum"]                = NP .. "mawsoleum.png",
 }
 
 local FishImageURLLower = {}
