@@ -306,7 +306,7 @@ local SecretFishList = {
     "Astrelle", "Moonwake Ray", "Astralune", "Starglass Guardian", "Pelagon",
     "Crimson Dreadtusk", "Riftborn Arowana", "Overlord Hydra", "Elemental Hydra", "Wintertusk Mammofin",
     "Stormhell Brute", "Pyrocoil", "Ashen Kingfish", "Tribunal Withering Core", "Everbloom", "Mr Money Bags", 
-    "Velobyte", "ShellShock X", "Cenobyte.EXE", "Jellybeam", "GigaByte", "Spiritborn Axolotl", "Sweet Tooth Gourdling", "Mawsoleum",
+    "Velobyte", "ShellShock X", "Cenobyte.EXE", "Jellybeam", "GigaByte", "Spiritborn Axolotl", "SweetTooth Gourdling", "Mawsoleum",
 }
 
 local ForgottenList = {
@@ -445,7 +445,7 @@ local FishChanceData = {
     ["Jellybeam"]                 = "1 in 4M",
     ["GigaByte"]                  = "1 in 4.5M",
     ["Spiritborn Axolotl"]        = "1 in 4M",
-    ["Sweet Tooth Gourdling"]     = "1 in 3M",
+    ["SweetTooth Gourdling"]      = "1 in 3M",
     ["Mawsoleum"]                 = "1 in 20M",
 }
 
@@ -553,7 +553,7 @@ local FishImageURL = {
     ["GigaByte"]                 = NP .. "gigabyte.png",
     ["Spiritborn Axolotl"]       = NP .. "spiritborn.png",
     ["Phantom Dead Zombie Shark"]= NP .. "phantomdead.png",
-    ["Sweet Tooth Gourdling"]    = NP .. "sweet.png",
+    ["SweetTooth Gourdling"]     = NP .. "sweet.png",
     ["Mawsoleum"]                = NP .. "mawsoleum.png",
 }
 
